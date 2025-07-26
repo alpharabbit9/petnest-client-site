@@ -1,0 +1,11 @@
+.navBg{
+    background-image: url('../../assets/images/header_shape.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.logo {
+  font-family: 'Baloo 2', cursive;
+}
