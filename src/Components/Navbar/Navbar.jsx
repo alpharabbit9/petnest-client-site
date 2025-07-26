@@ -9,7 +9,7 @@ const Navbar = () => {
         <NavLink
             to="/"
             className={({ isActive }) =>
-                isActive ? 'bg-[#F04336] text-white font-bold rounded px-3 py-1' : ''
+                isActive ? 'bg-[#F04336] text-white font-bold  rounded-bl-box rounded-tr-box px-3 py-1' : ''
             }
         >
             <li><a>Home</a></li>
@@ -18,7 +18,7 @@ const Navbar = () => {
         <NavLink
             to="/about"
             className={({ isActive }) =>
-                isActive ? 'bg-[#F04336] text-white font-bold  rounded px-3 py-1' : ''
+                isActive ? 'bg-[#F04336] text-white font-bold rounded-bl-box rounded-tr-box px-3 py-1' : ''
             }
         >
             <li><a>About</a></li>
@@ -27,7 +27,7 @@ const Navbar = () => {
         <NavLink
             to="/contact"
             className={({ isActive }) =>
-                isActive ? 'bg-[#F04336] text-white font-bold rounded px-3 py-1' : ''
+                isActive ? 'bg-[#F04336] text-white font-bold rounded-bl-box rounded-tr-box px-3 py-1' : ''
             }
         >
             <li><a>Contact</a></li>
