@@ -1,0 +1,13 @@
+.footerBg{
+    background-image: url('../../assets/images/footer_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.CRBg{
+    background-image: url('../../assets/images/copyright_shape.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
