@@ -1,15 +1,19 @@
 import './Navbar.css'
 import logo from '../../assets/images/icons8-cat-footprint-48.png'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import { AuthContext } from '../../Provider/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const navbarRef = useRef(null);
     const logoRef = useRef(null);
     const linksRef = useRef([]);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { user, userLogOut } = useContext(AuthContext);
+    const navigate = useNavigate()
 
     // GSAP animations on mount
     useEffect(() => {
@@ -136,12 +140,14 @@ const Navbar = () => {
     );
 
     return (
-        <div className="relative z-10">
+        <div className="relative z-50">
             {/* Navbar */}
             <motion.div
                 ref={navbarRef}
-                className="navbar navBg text-[#0A303A] font-semibold md:px-12 md:py-8 backdrop-blur-sm"
+                className="navbar fixed top-0 left-0  z-50 navBg text-[#0A303A] font-semibold md:px-12 md:py-8 "
                 initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6 }}
             >
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -164,7 +170,7 @@ const Navbar = () => {
                             {isMenuOpen && (
                                 <motion.ul
                                     tabIndex={0}
-                                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow-lg"
+                                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-lg"
                                     variants={mobileMenuVariants}
                                     initial="closed"
                                     animate="open"
@@ -183,7 +189,7 @@ const Navbar = () => {
                     >
                         <motion.img
                             ref={logoRef}
-                            className='w-11'
+                            className="w-11"
                             src={logo}
                             alt="PetNest Logo"
                             whileHover={{
@@ -192,9 +198,8 @@ const Navbar = () => {
                             }}
                         />
                         <motion.span
-                            className='font-bold'
+                            className="font-bold"
                             whileHover={{
-
                                 backgroundImage: "linear-gradient(45deg, #F04336, #ff6b5b)",
                                 backgroundClip: "text",
                                 WebkitBackgroundClip: "text",
@@ -219,77 +224,89 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end">
-                    <Link to={'/login'}>
-                        <motion.button
-                            className="relative overflow-hidden bg-[#F04336] rounded-2xl px-6 py-3 font-semibold shadow-lg"
-                            whileHover="hover"
-                            whileTap="tap"
-                            initial="initial"
-                            variants={{
-                                initial: {
-                                    scale: 1,
-                                    rotate: 0,
-                                    boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)"
-                                },
-                                hover: {
-                                    scale: 1.05,
-                                    rotate: -1,
-                                    boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04)"
-                                },
-                                tap: {
-                                    scale: 0.95,
-                                    rotate: 0
-                                }
-                            }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 400,
-                                damping: 17
-                            }}
-                        >
-                            <motion.span
-                                className="relative z-10 text-white"
+                    {user && user?.email ? (
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-13 rounded-full">
+                                    <img alt="user" src={user?.photoURL} />
+                                </div>
+                            </div>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow">
+                                <li>
+                                    <a className="justify-between">Profile <span className="badge">New</span></a>
+                                </li>
+                                <li><a>Settings</a></li>
+                                <li onClick={() => {
+                                    userLogOut();
+                                    navigate('/');
+                                    toast.success('Logged out successfully')
+                                }}><a>Logout</a></li>
+                            </ul>
+                        </div>
+                    ) : (
+                        <Link to={'/login'}>
+                            <motion.button
+                                className="relative overflow-hidden bg-[#F04336] rounded-2xl px-6 py-3 font-semibold shadow-lg"
+                                whileHover="hover"
+                                whileTap="tap"
+                                initial="initial"
                                 variants={{
-                                    initial: { color: "#ffffff" },
-                                    hover: { color: "#ffffff" },
+                                    initial: {
+                                        scale: 1,
+                                        rotate: 0,
+                                        boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)"
+                                    },
+                                    hover: {
+                                        scale: 1.05,
+                                        rotate: -1,
+                                        boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04)"
+                                    },
+                                    tap: {
+                                        scale: 0.95,
+                                        rotate: 0
+                                    }
                                 }}
-                                transition={{ duration: 0.4 }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 400,
+                                    damping: 17
+                                }}
                             >
-                                Login
-                            </motion.span>
-
-                            {/* Animated background wipe with gradient */}
-                            <motion.span
-                                className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#0A303A] to-[#1a4a5a]"
-                                variants={{
-                                    initial: { width: "0%" },
-                                    hover: { width: "100%" },
-                                }}
-                                transition={{
-                                    duration: 0.5,
-                                    ease: "easeInOut"
-                                }}
-                                style={{ zIndex: 0 }}
-                            />
-
-                            {/* Shine effect */}
-                            <motion.span
-                                className="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent via-white to-transparent opacity-20"
-                                variants={{
-                                    initial: { x: "-100%" },
-                                    hover: { x: "100%" }
-                                }}
-                                transition={{
-                                    duration: 0.6,
-                                    ease: "easeInOut"
-                                }}
-                                style={{ zIndex: 1 }}
-                            />
-                        </motion.button>
-                    </Link>
+                                <motion.span
+                                    className="relative z-10 text-white"
+                                    variants={{
+                                        initial: { color: "#ffffff" },
+                                        hover: { color: "#ffffff" }
+                                    }}
+                                    transition={{ duration: 0.4 }}
+                                >
+                                    Login
+                                </motion.span>
+                                <motion.span
+                                    className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#0A303A] to-[#1a4a5a]"
+                                    variants={{
+                                        initial: { width: "0%" },
+                                        hover: { width: "100%" }
+                                    }}
+                                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                                    style={{ zIndex: 0 }}
+                                />
+                                <motion.span
+                                    className="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent via-white to-transparent opacity-20"
+                                    variants={{
+                                        initial: { x: "-100%" },
+                                        hover: { x: "100%" }
+                                    }}
+                                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                                    style={{ zIndex: 1 }}
+                                />
+                            </motion.button>
+                        </Link>
+                    )}
                 </div>
             </motion.div>
         </div>
+
     );
 };
 

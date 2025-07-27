@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const FormSide = () => {
     return (
-        <div className='md:w-1/2 h-screen flex justify-center items-center border bg-gradient-to-br from-orange-100 via-white to-teal-100 relative overflow-hidden border-red-500'>
+        <div className='md:w-1/2 min-h-screen flex justify-center items-center  bg-gradient-to-br from-orange-100 via-white to-teal-100 relative overflow-hidden '>
 
             <div>
 

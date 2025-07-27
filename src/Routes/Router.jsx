@@ -4,6 +4,8 @@ import Root from './Root';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
+import About from '../Pages/About/About';
+import ContactPage from '../Pages/Contact Us/ContactUs';
 
 const Router = createBrowserRouter([
     {
@@ -13,6 +15,14 @@ const Router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>
+            },
+            {
+                path:'about',
+                element:<About></About>
+            },
+            {
+                path:'contact',
+                element:<ContactPage></ContactPage>
             }
         ]
     },

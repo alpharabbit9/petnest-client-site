@@ -2,19 +2,23 @@ import React from 'react';
 import Navbar from '../Components/Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Components/Footer/Footer';
+import { Toaster } from 'react-hot-toast';
 
 const Root = () => {
     return (
         <div className='font-poppins'>
-        <header>
-            <Navbar></Navbar>
-        </header>
-        <main>
-            <Outlet></Outlet>
-        </main>
-        <footer>
-            <Footer></Footer>
-        </footer>
+            <Toaster position="center" reverseOrder={false} />
+
+            <header>
+
+                <Navbar></Navbar>
+            </header>
+            <main className=' pt-20 md:pt-32'>
+                <Outlet></Outlet>
+            </main>
+            <footer>
+                <Footer></Footer>
+            </footer>
         </div>
     );
 };
