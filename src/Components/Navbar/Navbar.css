@@ -1,8 +1,10 @@
-.navBg{
+.navBg {
     background-image: url('../../assets/images/header_shape.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /* Keep */
+    background-repeat: no-repeat; /* Keep */
+    background-position: center; /* Add this for proper centering */
+    width: 100%; /* Fix here */
+    height: auto; /* Optional: or set a fixed height like 300px */
 }
 
 

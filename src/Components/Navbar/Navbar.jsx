@@ -136,6 +136,7 @@ const Navbar = () => {
             <NavLinkComponent to="/" index={0}>Home</NavLinkComponent>
             <NavLinkComponent to="/about" index={1}>About</NavLinkComponent>
             <NavLinkComponent to="/contact" index={2}>Contact</NavLinkComponent>
+            <NavLinkComponent to="/petlist" index={2}>Pet List</NavLinkComponent>
         </>
     );
 
@@ -144,7 +145,7 @@ const Navbar = () => {
             {/* Navbar */}
             <motion.div
                 ref={navbarRef}
-                className="navbar fixed top-0 left-0  z-50 navBg text-[#0A303A] font-semibold md:px-12 md:py-8 "
+                className="navbar fixed top-0   z-50 navBg text-[#0A303A] font-semibold  md:py-8 py-4 w-full "
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -183,7 +184,7 @@ const Navbar = () => {
                     </div>
 
                     <motion.a
-                        className="btn logo btn-ghost font-bold text-2xl text-[#F04336] overflow-hidden"
+                        className="btn logo btn-ghost font-bold text-lg md:text-2xl text-[#F04336] overflow-hidden"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
@@ -246,7 +247,7 @@ const Navbar = () => {
                     ) : (
                         <Link to={'/login'}>
                             <motion.button
-                                className="relative overflow-hidden bg-[#F04336] rounded-2xl px-6 py-3 font-semibold shadow-lg"
+                                className="relative overflow-hidden bg-[#F04336] rounded-2xl px-4 md:px-6 py-2 md:py-3 font-semibold shadow-lg"
                                 whileHover="hover"
                                 whileTap="tap"
                                 initial="initial"
