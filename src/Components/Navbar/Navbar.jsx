@@ -136,7 +136,8 @@ const Navbar = () => {
             <NavLinkComponent to="/" index={0}>Home</NavLinkComponent>
             <NavLinkComponent to="/about" index={1}>About</NavLinkComponent>
             <NavLinkComponent to="/contact" index={2}>Contact</NavLinkComponent>
-            <NavLinkComponent to="/petlist" index={2}>Pet List</NavLinkComponent>
+            <NavLinkComponent to="/petlist" index={3}>Pet List</NavLinkComponent>
+            <NavLinkComponent to="/donationCampaign" index={4}>Donation</NavLinkComponent>
         </>
     );
 
@@ -145,7 +146,7 @@ const Navbar = () => {
             {/* Navbar */}
             <motion.div
                 ref={navbarRef}
-                className="navbar fixed top-0   z-50 navBg text-[#0A303A] font-semibold  md:py-8 py-4 w-full "
+                className="navbar fixed top-0   z-50 navBg text-[#0A303A] font-semibold md:px-6  md:py-8 py-4 w-full "
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -236,7 +237,9 @@ const Navbar = () => {
                                 <li>
                                     <a className="justify-between">Profile <span className="badge">New</span></a>
                                 </li>
-                                <li><a>Settings</a></li>
+                                <Link to={'/dashboard'}>
+                                <li><a>Dashboard</a></li>
+                                </Link>
                                 <li onClick={() => {
                                     userLogOut();
                                     navigate('/');

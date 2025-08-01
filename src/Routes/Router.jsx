@@ -8,6 +8,14 @@ import About from '../Pages/About/About';
 import ContactPage from '../Pages/Contact Us/ContactUs';
 import PetList from '../Pages/PetList/PetList';
 import PetDetails from '../Pages/PetList/Pet Details/PetDetails';
+import Random from '../Components/Random';
+import Error from '../Components/Error';
+import DonationCampaign from '../Pages/Donation Campaign/DonationCampaign';
+import DonationDetals from '../Pages/Donation Campaign/Donation Details/DonationDetals';
+import DonationDetails from '../Pages/Donation Campaign/Donation Details/DonationDetals';
+import Dashboard from '../Pages/Dashboard/Dashboard';
+import UserDashboard from '../Pages/Dashboard/User Dashboard/UserDashboard';
+import AdminDashboard from '../Pages/Dashboard/Admin Dashboard/AdminDashboard';
 
 const Router = createBrowserRouter([
     {
@@ -31,8 +39,16 @@ const Router = createBrowserRouter([
                 element:<PetList></PetList>
             },
             {
+                path:'donationCampaign',
+                element:<DonationCampaign></DonationCampaign>
+            },
+            {
                 path:'petDetails/:id',
                 element:<PetDetails></PetDetails>
+            },
+            {
+                path:'donationDetails/:id',
+                element:<DonationDetails></DonationDetails>
             },
         ]
     },
@@ -43,6 +59,22 @@ const Router = createBrowserRouter([
     {
         path:'register',
         element:<Register></Register>
+    },
+    {
+        path:'userDashboard',
+        element:<UserDashboard></UserDashboard>
+    },
+    {
+        path:'dashboard',
+        element:<Dashboard></Dashboard>
+    },
+    {
+        path:'AdminDashboard',
+        element:<AdminDashboard></AdminDashboard>
+    },
+    {
+        path:'*',
+        element:<Error></Error>
     },
 ])
 

@@ -1,202 +1,47 @@
 [
   {
     "id": 1,
-    "image": "https://images.squarespace-cdn.com/content/v1/54822a56e4b0b30bd821480c/45ed8ecf-0bb2-4e34-8fcf-624db47c43c8/Golden+Retrievers+dans+pet+care.jpeg",
-    "name": "Milo",
-    "age": "2 years",
-    "category": "Dog",
-    "location": "Dhaka, Bangladesh",
-    "short_description": "Energetic and playful. Loves to cuddle.",
-    "long_description": "Milo is a lively Labrador who loves long walks and fetch games. He's well-behaved around kids and other pets. He's vaccinated and ready for a new forever home."
+    "petName": "Luna",
+    "petImage": "https://static.vecteezy.com/system/resources/previews/002/098/203/non_2x/silver-tabby-cat-sitting-on-green-background-free-photo.jpg",
+    "maxDonation": 500,
+    "lastDate": "2025-08-15",
+    "shortDescription": "Help Luna get the treatment she needs.",
+    "longDescription": "Luna is a gentle Labrador rescued from a roadside accident. She requires urgent surgery and aftercare. Your generous support will help Luna walk again and find a loving forever home."
   },
   {
     "id": 2,
-    "image": "https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_640.jpg",
-    "name": "Whiskers",
-    "age": "1 year",
-    "category": "Cat",
-    "location": "Chittagong, Bangladesh",
-    "short_description": "Curious and affectionate. Lap-cat certified.",
-    "long_description": "Whiskers is a domestic shorthair cat who loves exploring and climbing. She's gentle, vaccinated, and litter-trained. A great companion for any cat lover."
+    "petName": "Milo",
+    "petImage": "https://cdn.royalcanin-weshare-online.io/pCJJPmYBaxEApS7LeAbn/v1/ed7h-how-to-buy-a-puppy-hero-dog",
+    "maxDonation": 350,
+    "lastDate": "2025-08-22",
+    "shortDescription": "Sponsor Milo's vaccination and food.",
+    "longDescription": "Milo is a playful kitten found abandoned in a park. He needs vaccinations, proper food, and basic health checks. Every bit you donate helps keep Milo healthy and happy."
   },
   {
     "id": 3,
-    "image": "https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_1280.jpg",
-    "name": "Charlie",
-    "age": "4 years",
-    "category": "Dog",
-    "location": "Sylhet, Bangladesh",
-    "short_description": "Calm, loyal, and well-trained.",
-    "long_description": "Charlie is a mature Golden Retriever who’s trained, vaccinated, and very gentle with children. He enjoys quiet environments and is ideal for families."
+    "petName": "Coco",
+    "petImage": "https://bvajournals.onlinelibrary.wiley.com/cms/asset/97f8494c-4cf9-4aae-9c0f-d49f5b8f5372/catonline.jpg",
+    "maxDonation": 600,
+    "lastDate": "2025-09-01",
+    "shortDescription": "Help Coco get ready for adoption.",
+    "longDescription": "Coco is a rescued bird with a broken wing. We are working on her rehabilitation so she can be adopted into a safe environment. Your donation helps cover her vet and care expenses."
   },
   {
     "id": 4,
-    "image": "https://static.vecteezy.com/system/resources/previews/002/098/203/non_2x/silver-tabby-cat-sitting-on-green-background-free-photo.jpg",
-    "name": "Luna",
-    "age": "6 months",
-    "category": "Cat",
-    "location": "Rajshahi, Bangladesh",
-    "short_description": "Playful kitten with a sweet meow.",
-    "long_description": "Luna is a curious and loving kitten. She’s full of energy, enjoys attention, and is fully litter-trained. She needs a caring home to grow up in."
+    "petName": "Buddy",
+    "petImage": "https://cdn.royalcanin-weshare-online.io/pCJJPmYBaxEApS7LeAbn/v1/ed7h-how-to-buy-a-puppy-hero-dog",
+    "maxDonation": 450,
+    "lastDate": "2025-08-30",
+    "shortDescription": "Support Buddy's recovery from malnutrition.",
+    "longDescription": "Buddy, a loving Golden Retriever, was found severely malnourished. He is currently under treatment. Help us feed and care for him so he can be adopted by a loving family."
   },
   {
     "id": 5,
-    "image": "https://cdn.royalcanin-weshare-online.io/pCJJPmYBaxEApS7LeAbn/v1/ed7h-how-to-buy-a-puppy-hero-dog",
-    "name": "Buddy",
-    "age": "3 years",
-    "category": "Dog",
-    "location": "Khulna, Bangladesh",
-    "short_description": "Gentle giant who loves belly rubs.",
-    "long_description": "Buddy is a German Shepherd with a calm demeanor. He’s great with children and other dogs. Fully vaccinated, leash-trained, and obedient."
-  },
-  {
-    "id": 6,
-    "image": "hhttps://www.purina.in/sites/default/files/2020-12/Understanding%20Your%20Cat%27s%20Body%20LanguageHERO.jpg",
-    "name": "Bella",
-    "age": "2 months",
-    "category": "Cat",
-    "location": "Barisal, Bangladesh",
-    "short_description": "Tiny, fluffy, and full of love.",
-    "long_description": "Bella is a baby Persian cat who loves sleeping in cozy corners and purring next to people. She needs a warm, loving environment to thrive."
-  },
-  {
-    "id": 7,
-    "image": "https://cdn.shopify.com/s/files/1/0255/7424/4445/files/image3_480x480.jpg?v=1651129751",
-    "name": "Max",
-    "age": "5 years",
-    "category": "Dog",
-    "location": "Comilla, Bangladesh",
-    "short_description": "Senior dog with a heart of gold.",
-    "long_description": "Max is a senior Beagle looking for a peaceful home. He’s calm, doesn’t bark much, and is happy just being around you. Ideal for elderly adopters."
-  },
-  {
-    "id": 8,
-    "image": "https://bvajournals.onlinelibrary.wiley.com/cms/asset/97f8494c-4cf9-4aae-9c0f-d49f5b8f5372/catonline.jpg",
-    "name": "Coco",
-    "age": "1.5 years",
-    "category": "Cat",
-    "location": "Mymensingh, Bangladesh",
-    "short_description": "Sassy and smart. Loves fish snacks.",
-    "long_description": "Coco is a Siamese cat with a big personality. She’s vocal, intelligent, and affectionate once she gets to know you. Indoor only and litter-trained."
-  },
-  {
-    "id": 9,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFFRoxRKvAy4N8m4cnfNYRuaXORma8CQ4ZwE5bDxBtqpZVvDhkX-YGH34mjIyi8wCBT4&usqp=CAU",
-    "name": "Rocky",
-    "age": "2 years",
-    "category": "Dog",
-    "location": "Narayanganj, Bangladesh",
-    "short_description": "Muscular, energetic, and super friendly.",
-    "long_description": "Rocky is a Pit Bull mix who’s incredibly friendly and full of energy. He’s leash-trained, crate-trained, and loves playing outdoors."
-  },
-  {
-    "id": 10,
-    "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-142832910.jpg?c=16x9&q=h_833,w_1480,c_fill",
-    "name": "Snowy",
-    "age": "8 months",
-    "category": "Cat",
-    "location": "Rangpur, Bangladesh",
-    "short_description": "White furball of joy.",
-    "long_description": "Snowy is a white Angora kitten. She’s soft, calm, and loves sitting by the window. Litter-trained and gets along with other cats."
-  },
-  {
-    "id": 11,
-    "image": "https://t3.ftcdn.net/jpg/02/47/33/08/360_F_247330858_RvSJWAhMbfrqsM5VUmjLD4gzzSKUaJls.jpg",
-    "name": "Floppy",
-    "age": "1 year",
-    "category": "Rabbit",
-    "location": "Bogura, Bangladesh",
-    "short_description": "Fluffy ears and loves carrots.",
-    "long_description": "Floppy is a sweet and calm rabbit who enjoys cuddles and soft bedding. She's perfect for apartment life and loves interacting gently with kids."
-  },
-  {
-    "id": 12,
-    "image": "https://static.vecteezy.com/system/resources/previews/049/201/489/non_2x/colorful-birds-perched-on-a-branch-in-a-lush-green-forest-during-daylight-photo.jpeg",
-    "name": "Kiwi",
-    "age": "6 months",
-    "category": "Bird",
-    "location": "Dhaka, Bangladesh",
-    "short_description": "Colorful parrot with a cheeky personality.",
-    "long_description": "Kiwi is a young parakeet that’s learning to mimic sounds. She’s playful and friendly. Ideal for someone who wants a chatty companion."
-  },
-  {
-    "id": 13,
-    "image": "https://images.unsplash.com/photo-1591561582301-7ce6588cc286?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHJhYmJpdHxlbnwwfHwwfHx8MA%3D%3D",
-    "name": "Bubbles",
-    "age": "3 years",
-    "category": "Cat",
-    "location": "Jamalpur, Bangladesh",
-    "short_description": "Loves sunbathing and naps.",
-    "long_description": "Bubbles is a calm, mature cat who enjoys laying in the sun and watching birds through the window. She’s fully vaccinated and neutered."
-  },
-  {
-    "id": 14,
-    "image": "https://cdn.pixabay.com/photo/2023/06/04/23/47/rufus-8041082_1280.jpg",
-    "name": "Oreo",
-    "age": "1.5 years",
-    "category": "Rabbit",
-    "location": "Sylhet, Bangladesh",
-    "short_description": "Black and white bunny with attitude.",
-    "long_description": "Oreo is a spunky rabbit who loves hopping around and nibbling veggies. He's litter-box trained and responds well to routines."
-  },
-  {
-    "id": 15,
-    "image": "https://external-preview.redd.it/z1MEqDZQeca24QFTmO4Hyyg7_k_1PSe22DAHOScxAAU.jpg?width=1080&crop=smart&auto=webp&s=a9ee1ea744ea5e6ac6e4b14dbdba71799bada94b",
-    "name": "Zeus",
-    "age": "4 years",
-    "category": "Dog",
-    "location": "Noakhali, Bangladesh",
-    "short_description": "Strong and protective, yet sweet.",
-    "long_description": "Zeus is a loyal Rottweiler who is obedient and well-trained. He's protective, yet gentle with family. Needs an owner who can handle large breeds."
-  },
-  {
-    "id": 16,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrpRevJRh_IiP6An8dOyFJtfS4mBlDOlC7kD09OtmX4mmA9q6vuCfXboCjqdNyX9bRzBk&usqp=CAU",
-    "name": "Peanut",
-    "age": "2 months",
-    "category": "Bird",
-    "location": "Jessore, Bangladesh",
-    "short_description": "Tiny canary with a beautiful voice.",
-    "long_description": "Peanut is a baby canary who chirps cheerfully in the morning. He's still learning to fly and would love a safe cage with space to stretch his wings."
-  },
-  {
-    "id": 17,
-    "image": "https://t4.ftcdn.net/jpg/01/22/61/11/360_F_122611165_zdRQrI83jEUz9LQKgNwWQlpOkwIsPkUF.jpg",
-    "name": "Dusty",
-    "age": "7 months",
-    "category": "Cat",
-    "location": "Moulvibazar, Bangladesh",
-    "short_description": "Shy but sweet once comfortable.",
-    "long_description": "Dusty takes a little time to warm up but becomes very affectionate once settled. She's been dewormed and vaccinated, and is litter-trained."
-  },
-  {
-    "id": 18,
-    "image": "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/a/m/AmericanGoldfinch_MattWilliams_4000x2200.jpg?crop=0%2C0%2C4000%2C2200&wid=1300&hei=715&scl=3.076923076923077",
-    "name": "Bolt",
-    "age": "3 years",
-    "category": "Dog",
-    "location": "Gazipur, Bangladesh",
-    "short_description": "Fast and loves to run!",
-    "long_description": "Bolt is a Greyhound mix with an energetic nature. He loves running, fetching, and long outdoor adventures. Perfect for active families."
-  },
-  {
-    "id": 19,
-    "image": "https://acepets.co.uk/wp-content/uploads/2024/06/albino-rabbit-blog-impact.jpg",
-    "name": "Mango",
-    "age": "10 months",
-    "category": "Bird",
-    "location": "Feni, Bangladesh",
-    "short_description": "Bright and talkative parrot.",
-    "long_description": "Mango is a vibrant green parrot who loves to mimic sounds and whistle. She’s a fun-loving bird and enjoys company throughout the day."
-  },
-  {
-    "id": 20,
-    "image": "https://static.scientificamerican.com/sciam/cache/file/7A715AD8-449D-4B5A-ABA2C5D92D9B5A21_source.png?w=1200",
-    "name": "Maple",
-    "age": "2 years",
-    "category": "Rabbit",
-    "location": "Narsingdi, Bangladesh",
-    "short_description": "Sweet bunny with caramel fur.",
-    "long_description": "Maple is a calm, affectionate rabbit who enjoys head rubs and soft bedding. She’s healthy, vaccinated, and used to being around kids."
+    "petName": "Snowball",
+    "petImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFFRoxRKvAy4N8m4cnfNYRuaXORma8CQ4ZwE5bDxBtqpZVvDhkX-YGH34mjIyi8wCBT4&usqp=CAU",
+    "maxDonation": 300,
+    "lastDate": "2025-08-20",
+    "shortDescription": "Fund Snowball's neutering surgery.",
+    "longDescription": "Snowball is a friendly rabbit who needs neutering and routine vet care. Your contribution will help reduce unwanted pet populations and prepare Snowball for his forever home."
   }
 ]

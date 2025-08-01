@@ -49,7 +49,7 @@ const PetDetails = () => {
 
             <div className='flex gap-3'>
                 <div className='md:w-1/2'>
-                    <img className='rounded-2xl' src={pet.image} alt="" />
+                    <img className='rounded-2xl w-full h-full object-cover' src={pet.image} alt="" />
                 </div>
 
                 <div className=' border border-gray-400 rounded-2xl flex-1 '>
@@ -80,7 +80,7 @@ const PetDetails = () => {
                                 <p
                                     className='flex gap-2 text-xs'
                                 ><FaPaw className='text-xs  text-[#F04336]'></FaPaw></p>
-                                <p className='text-lg font-bold'>Male</p>
+                                <p className='text-lg font-bold'>Large</p>
                             </div>
                         </div>
                     </div>
