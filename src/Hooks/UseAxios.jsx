@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const AxiosSecure = axios.create({
-    baseURL:'http://localhost:5000'
+    baseURL:'https://petnest-server-site.vercel.app'
 })
 
 const UseAxios = () => {

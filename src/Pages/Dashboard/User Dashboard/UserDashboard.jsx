@@ -30,7 +30,7 @@ import {
 const UserDashboard = () => {
 
     const [activeRoute, setActiveRoute] = useState('results');
-    const { user } = useContext(AuthContext);
+    const { user , userLogOut } = useContext(AuthContext);
     const [currentStudent, setCurrentStudent] = useState([]);
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const navigate = useNavigate();
@@ -57,8 +57,7 @@ const UserDashboard = () => {
                 return <CreateDonation></CreateDonation>;
             case 'myDonationCampaign':
                 return <MyDonationCampaigns></MyDonationCampaigns>; // Replace with actual component
-            case 'myDonations':
-                return <MyDonations></MyDonations>; // Replace with actual component
+            
             default:
                 return <AddPet></AddPet>;
         }
@@ -105,7 +104,7 @@ const UserDashboard = () => {
                         { icon: <GiPawHeart />, label: 'My Added Pet', key: 'myAddedPet' },
                         { icon: <FaHandsHelping />, label: 'Create Donation', key: 'createDonation' },
                         { icon: <LuHandHelping />, label: 'Donation Campaign', key: 'myDonationCampaign' },
-                        { icon: <GiCash />, label: 'My Donations', key: 'myDonations' }
+                       
                     ].map(item => (
                         <motion.button
                             key={item.key}
@@ -138,6 +137,10 @@ const UserDashboard = () => {
                         variants={sidebarItemVariants}
                         whileHover="hover"
                         whileTap="tap"
+                        onClick={() =>{
+                            userLogOut()
+                            navigate('/')
+                        }}
                     >
                         <LogOut className="w-5 h-5" />
                         <span>Logout</span>

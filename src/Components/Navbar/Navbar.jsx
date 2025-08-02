@@ -152,27 +152,24 @@ const Navbar = () => {
                 transition={{ duration: 0.6 }}
             >
                 <div className="navbar-start">
-                    <div className="dropdown">
-                        <motion.div
-                            tabIndex={0}
-                            role="button"
-                            className="btn btn-ghost lg:hidden"
-                            variants={hamburgerVariants}
-                            animate={isMenuOpen ? "open" : "closed"}
+                    <div className="lg:hidden relative">
+                        <motion.button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="btn btn-ghost"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
+                            animate={isMenuOpen ? "open" : "closed"}
+                            variants={hamburgerVariants}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                             </svg>
-                        </motion.div>
+                        </motion.button>
 
                         <AnimatePresence>
                             {isMenuOpen && (
                                 <motion.ul
-                                    tabIndex={0}
-                                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-lg"
+                                    className="absolute left-0 mt-2 w-52 p-2 shadow-lg bg-base-100 rounded-box z-50"
                                     variants={mobileMenuVariants}
                                     initial="closed"
                                     animate="open"
@@ -183,6 +180,7 @@ const Navbar = () => {
                             )}
                         </AnimatePresence>
                     </div>
+
 
                     <motion.a
                         className="btn logo btn-ghost font-bold text-lg md:text-2xl text-[#F04336] overflow-hidden"
@@ -234,11 +232,8 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow">
-                                <li>
-                                    <a className="justify-between">Profile <span className="badge">New</span></a>
-                                </li>
                                 <Link to={'/dashboard'}>
-                                <li><a>Dashboard</a></li>
+                                    <li><a>Dashboard</a></li>
                                 </Link>
                                 <li onClick={() => {
                                     userLogOut();

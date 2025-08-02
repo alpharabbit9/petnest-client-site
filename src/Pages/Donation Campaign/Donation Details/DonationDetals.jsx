@@ -45,7 +45,7 @@ const DonationDetails = () => {
 
     useEffect(() => {
 
-        AxiosSecure.get(`/donation`)
+        AxiosSecure.get(`/donations`)
             .then(res => {
                 // console.log(res.data)
                 setPetsCard(res.data)

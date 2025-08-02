@@ -20,15 +20,16 @@ import {
   Book,
   Home
 } from 'lucide-react';
-import Users from './Users';
+import Users from './UserManagement';
 import AllPets from './AllPets';
 import AllDonations from './AllDonations';
+
 
 
 const AdminDashboard = () => {
 
     const [activeRoute, setActiveRoute] = useState('results');
-    const { user } = useContext(AuthContext);
+    const { user , userLogOut } = useContext(AuthContext);
     const [currentStudent, setCurrentStudent] = useState([]);
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const navigate = useNavigate();
@@ -53,7 +54,7 @@ const AdminDashboard = () => {
                 return <AllPets></AllPets>;
             case 'allDonations':
                 return <AllDonations></AllDonations>;
-            // Replace with actual component
+           
             default:
                 return <Users></Users>;
         }
@@ -98,7 +99,7 @@ const AdminDashboard = () => {
                     {[
                         { icon: <FaUser /> , label: 'Users', key: 'users' },
                         { icon: <GiPawHeart />, label: 'All Pets', key: 'allPets' },
-                        { icon: <FaHandsHelping />, label: 'All Donations', key: 'allDonation' },
+                        { icon: <FaHandsHelping />, label: 'All Donations', key: 'allDonations' },
                        
                     ].map(item => (
                         <motion.button
@@ -132,6 +133,11 @@ const AdminDashboard = () => {
                         variants={sidebarItemVariants}
                         whileHover="hover"
                         whileTap="tap"
+                        onClick={() =>{
+                            userLogOut()
+                            navigate('/')
+                        }}
+                        
                     >
                         <LogOut className="w-5 h-5" />
                         <span>Logout</span>

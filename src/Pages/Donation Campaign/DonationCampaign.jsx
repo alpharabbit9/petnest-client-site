@@ -28,7 +28,7 @@ const DonationCampaign = () => {
 
     useEffect(() => {
 
-        AxiosSecure.get('/donation')
+        AxiosSecure.get('/donations')
             .then(res => {
                 console.log(res.data)
                 setPets(res.data)
