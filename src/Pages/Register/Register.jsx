@@ -11,7 +11,7 @@ import axios from 'axios';
 
 const Register = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const { createUser, setUser, loading, updateUserProfile } = useContext(AuthContext);
+    const { createUser, setUser, loading, updateUserProfile  , createGoogleUser} = useContext(AuthContext);
     const navigate = useNavigate();
     const axiosSecure = UseAxios();
 
@@ -67,6 +67,35 @@ const Register = () => {
             });
     };
 
+
+    const HandleGoogle = () => {
+
+        createGoogleUser()
+            .then(res => {
+                console.log(res.user)
+                setUser(res.user);
+                const userInfo = {
+                    name: res.user?.displayName,
+                    email: res.user?.email,
+                    image: res.user?.photoURL,
+                    role:'user'
+                }
+
+                axiosSecure.post('/users', userInfo)
+                    .then(res => {
+                        console.log(res.data)
+                        navigate('/');
+                        if (res.data.insertedId) {
+                            toast.success('Welcome to PawConnect')
+                        }
+                    })
+
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+
+    }
 
 
     return (
@@ -144,7 +173,9 @@ const Register = () => {
                                         Create an account
                                     </button>
 
-                                    <button type="button" className='btn btn-block text-[#0A303A]'>
+                                    <button
+                                    onClick={HandleGoogle}
+                                    type="button" className='btn btn-block text-[#0A303A]'>
                                         <FcGoogle />
                                         Login with Google
                                     </button>

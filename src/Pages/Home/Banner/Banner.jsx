@@ -264,7 +264,7 @@ const Banner = () => {
     );
 
     return (
-        <div className="-mt-7 min-h-screen relative overflow-hidden">
+        <div className="-mt-7 md:min-h-screen relative overflow-hidden">
             {/* Background overlay */}
             <div 
                 ref={overlayRef}

@@ -6,13 +6,14 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from '../../Provider/AuthProvider';
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
+import axios from 'axios';
 
 
 const Login = () => {
 
 
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { UserLogIn, setUser, loading } = useContext(AuthContext)
+    const { UserLogIn, setUser, loading   , createGoogleUser} = useContext(AuthContext)
     const navigate = useNavigate();
 
 
@@ -33,9 +34,37 @@ const Login = () => {
                 toast.success('welcome  Back')
 
             })
-            
 
 
+
+
+    }
+
+    const HandleGoogle = () => {
+
+        createGoogleUser()
+            .then(res => {
+                console.log(res.user)
+                setUser(res.user);
+                const userInfo = {
+                    name: res.user?.displayName,
+                    email: res.user?.email,
+                    image: res.user?.photoURL
+                }
+
+                axios.post('/users', userInfo)
+                    .then(res => {
+                        console.log(res.data)
+                        navigate('/');
+                        if (res.data.insertedId) {
+                            toast.success("Welcome Back")
+                        }
+                    })
+
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
 
     }
 
@@ -82,7 +111,9 @@ const Login = () => {
 
                                     <button type="submit" className="btn text-white bg-[#F04336] w-full mt-2">Login</button>
 
-                                    <button className='btn btn-block text-[#0A303A]'>
+                                    <button
+                                    onClick={HandleGoogle}
+                                     className='btn btn-block text-[#0A303A]'>
                                         <FcGoogle />
                                         Login with Google
                                     </button>
